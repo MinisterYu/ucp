@@ -36,9 +36,9 @@ class Test(unittest.TestCase):
         # self._driver_find_element(by=By.XPATH, value="//android.widget.ImageView[@content-desc='消息']").click()
         # self._driver_find_element(by=By.CLASS_NAME,value="android.widget.EditText").send_keys(u'平安银行信用卡')
         # self._driver_find_element(by=By.XPATH,value="//*[@text='发送']").click()
-        value = element('/').Attribute("content-desc='当前所在页面,与统一通讯平台服务号的聊天'",2).FrameLayout().LinearLayout().LinearLayout().ListView().draw#.RelativeLayout().draw
+        value = element('/').FrameLayout("content-desc='当前所在页面,与统一通讯平台服务号的聊天'").FrameLayout().LinearLayout(index=2).FrameLayout().FrameLayout().LinearLayout().FrameLayout(index=2).FrameLayout().ListView().draw
         print value
-        print self._driver_find_elements(by=By.XPATH,value=value)
+        print self._driver_find_element(by=By.XPATH,value=value)
 
     def _driver_find_element(self, by, value):
         return self.wait_for_element_present(by,value)

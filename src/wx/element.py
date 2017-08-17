@@ -6,38 +6,48 @@ class element():
         self.e = e
 
     def Attribute(self,attr,index=0):
+        e = ''
         if not index:
-            self.e += '/*[@{0}]'.format(attr)
+            e += '/*[@{0}]'.format(attr)
         else:
-            self.e += '/*[@{0}][{1}]'.format(attr,index)
+            e += '/*[@{0}][{1}]'.format(attr,index)
+        self.e += e
         return element(self.e)
 
-    def FrameLayout(self,index=0):
-        if not index:
-            self.e += '/android.widget.FrameLayout'
-        else:
-            self.e += '/android.widget.FrameLayout[{0}]'.format(index)
+    def FrameLayout(self,attr='',index=0):
+        e = '/android.widget.FrameLayout'
+        if attr :
+            e += '[@{0}]'.format(attr)
+        if index:
+            e += '[{0}]'.format(index)
+        self.e += e
         return element(self.e)
 
-    def LinearLayout(self,index=0):
-        if not index:
-            self.e += '/android.widget.LinearLayout'
-        else:
-            self.e += '/android.widget.LinearLayout[{0}]'.format(index)
+    def LinearLayout(self,attr='',index=0):
+        e = '/android.widget.LinearLayout'
+        if attr :
+            e += '[@{0}]'.format(attr)
+        if index:
+            e += '[{0}]'.format(index)
+        self.e += e
         return element(self.e)
 
-    def ListView(self,index=0):
-        if not index:
-            self.e += '/android.widget.ListView'
-        else:
-            self.e += '/android.widget.ListView[{0}]'.format(index)
+    def ListView(self,attr='',index=0):
+        e = '/android.widget.ListView'
+        if attr :
+            e += '[@{0}]'.format(attr)
+        if index:
+            e += '[{0}]'.format(index)
+        self.e += e
         return element(self.e)
 
-    def RelativeLayout(self,index=0):
-        if not index:
-            self.e += '/android.widget.RelativeLayout'
-        else:
-            self.e += '/android.widget.RelativeLayout[{0}]'.format(index)
+    def RelativeLayout(self,attr='',index=0):
+        e = '/android.widget.RelativeLayout'
+        if attr :
+            e += '[@{0}]'.format(attr)
+        if index:
+            e += '[{0}]'.format(index)
+        self.e += e
         return element(self.e)
 
     @property
@@ -46,5 +56,4 @@ class element():
 
 
 if __name__ == '__main__':
-    e = element('/')
-    print e.Attribute("content-desc='当前所在页面,与统一通讯平台服务号的聊天'").draw
+    print element('/').FrameLayout("content-desc='当前所在页面,与统一通讯平台服务号的聊天'").FrameLayout().LinearLayout().LinearLayout().ListView().draw
