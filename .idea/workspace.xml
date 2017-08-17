@@ -14,8 +14,8 @@
       <file leaf-file-name="appium_test.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/wx/appium_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="38" column="209" lean-forward="false" selection-start-line="38" selection-start-column="209" selection-end-line="38" selection-end-column="209" />
+            <state relative-caret-position="276">
+              <caret line="39" column="114" lean-forward="false" selection-start-line="39" selection-start-column="114" selection-end-line="39" selection-end-column="114" />
               <folding>
                 <element signature="e#69#84#0" expanded="true" />
               </folding>
@@ -26,8 +26,8 @@
       <file leaf-file-name="element.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/wx/element.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="13" column="16" lean-forward="false" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
+            <state relative-caret-position="504">
+              <caret line="58" column="14" lean-forward="false" selection-start-line="58" selection-start-column="14" selection-end-line="58" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -52,6 +52,7 @@
       <find>]&quot;</find>
       <find>_driver</find>
       <find>return</find>
+      <find>attr='',index=0</find>
     </findStrings>
     <replaceStrings>
       <replace>self.desired_caps</replace>
@@ -59,6 +60,7 @@
       <replace>&quot;]</replace>
       <replace>_driver_find_element</replace>
       <replace>self.e = '/' +</replace>
+      <replace>index=0,attr=''</replace>
     </replaceStrings>
     <dirStrings>
       <dir>E:\PycharmProjects\ucp</dir>
@@ -286,7 +288,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2916225" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2916225" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -420,16 +422,16 @@
     <entry file="file://$PROJECT_DIR$/src/wx/test.py" />
     <entry file="file://$PROJECT_DIR$/src/wx/element.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="16" lean-forward="false" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
+        <state relative-caret-position="504">
+          <caret line="58" column="14" lean-forward="false" selection-start-line="58" selection-start-column="14" selection-end-line="58" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/wx/appium_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="38" column="209" lean-forward="false" selection-start-line="38" selection-start-column="209" selection-end-line="38" selection-end-column="209" />
+        <state relative-caret-position="276">
+          <caret line="39" column="114" lean-forward="false" selection-start-line="39" selection-start-column="114" selection-end-line="39" selection-end-column="114" />
           <folding>
             <element signature="e#69#84#0" expanded="true" />
           </folding>

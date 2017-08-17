@@ -1,8 +1,8 @@
 #coding:utf-8
 
-class element():
+class root():
 
-    def __init__(self,e):
+    def __init__(self,e='/'):
         self.e = e
 
     def Attribute(self,attr,index=0):
@@ -12,43 +12,43 @@ class element():
         else:
             e += '/*[@{0}][{1}]'.format(attr,index)
         self.e += e
-        return element(self.e)
+        return root(self.e)
 
-    def FrameLayout(self,attr='',index=0):
+    def FrameLayout(self,index=0,attr=''):
         e = '/android.widget.FrameLayout'
         if attr :
             e += '[@{0}]'.format(attr)
         if index:
             e += '[{0}]'.format(index)
         self.e += e
-        return element(self.e)
+        return root(self.e)
 
-    def LinearLayout(self,attr='',index=0):
+    def LinearLayout(self,index=0,attr=''):
         e = '/android.widget.LinearLayout'
         if attr :
             e += '[@{0}]'.format(attr)
         if index:
             e += '[{0}]'.format(index)
         self.e += e
-        return element(self.e)
+        return root(self.e)
 
-    def ListView(self,attr='',index=0):
+    def ListView(self,index=0,attr=''):
         e = '/android.widget.ListView'
         if attr :
             e += '[@{0}]'.format(attr)
         if index:
             e += '[{0}]'.format(index)
         self.e += e
-        return element(self.e)
+        return root(self.e)
 
-    def RelativeLayout(self,attr='',index=0):
+    def RelativeLayout(self,index=0,attr=''):
         e = '/android.widget.RelativeLayout'
         if attr :
             e += '[@{0}]'.format(attr)
         if index:
             e += '[{0}]'.format(index)
         self.e += e
-        return element(self.e)
+        return root(self.e)
 
     @property
     def draw(self):
@@ -56,4 +56,4 @@ class element():
 
 
 if __name__ == '__main__':
-    print element('/').FrameLayout("content-desc='当前所在页面,与统一通讯平台服务号的聊天'").FrameLayout().LinearLayout().LinearLayout().ListView().draw
+    print root().FrameLayout("content-desc='当前所在页面,与统一通讯平台服务号的聊天'").FrameLayout().LinearLayout().LinearLayout().ListView().draw
