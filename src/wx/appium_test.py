@@ -37,24 +37,50 @@ class Test(unittest.TestCase):
         # self._driver_find_element(by=By.XPATH, value="//android.widget.ImageView[@content-desc='消息']").click()
         # self._driver_find_element(by=By.CLASS_NAME,value="android.widget.EditText").send_keys(u'平安银行信用卡')
         # self._driver_find_element(by=By.XPATH,value="//*[@text='发送']").click()
-        value = root().FrameLayout(attr='content-desc="当前所在页面,与统一通讯平台服务号的聊天"').FrameLayout().LinearLayout(2).draw#FrameLayout().FrameLayout().LinearLayout().FrameLayout(2).FrameLayout().draw#.ListView().draw
-        print value
-        print self._driver_find_elements(by=By.XPATH,value=value)
+        list_view = root().FrameLayout(attr='content-desc="当前所在页面,与统一通讯平台服务号的聊天"')\
+            .FrameLayout()\
+            .LinearLayout()\
+            .FrameLayout()\
+            .ViewGroup()\
+            .FrameLayout(1)\
+            .LinearLayout()\
+            .FrameLayout()\
+            .LinearLayout()\
+            .FrameLayout()\
+            .FrameLayout()\
+            .ListView().RelativeLayout().draw
 
-    def _driver_find_element(self, by, value):
-        return self.wait_for_element_present(by,value)
+        #   LinearLayout().LinearLayout().LinearLayout().TextView().draw
+        # print value
+        last_msg = self._driver_find_elements(by=By.XPATH,value=list_view)[-1]
+
+        # '//android.widget.LinearLayout/android.widget.RelativeLayout/*[@content-desc='#{agent}']"'
+        agent_icon = root().LinearLayout().RelativeLayout().Attribute("content-desc='统一通讯平台服务号头像'").draw
+        print agent_icon
+        # //android.widget.LinearLayout/android.widget.LinearLayout
+        pic = root().LinearLayout().LinearLayout().draw
+        self._driver_find_element(by=By.XPATH,value=agent_icon,obj=last_msg)
+        self._driver_find_element(by=By.XPATH,value=pic,obj=last_msg).click()
+
+
+    def _driver_find_element(self, by, value, timeout=10,obj=''):
+        return self.wait_for_element_present(by,value,timeout,obj)
 
     def _driver_find_elements(self, by, value):
         return self.wait_for_elements_present(by,value)
 
-    def wait_for_element_present(self, by,value, timeout=10):
+    def wait_for_element_present(self, by,value,timeout,obj):
         i = 0
         while i < timeout:
             try:
-                return self.driver.find_element(by,value)
+                if not obj:
+                    return self.driver.find_element(by,value)
+                else:
+                    return obj.find_element(by,value)
             except NoSuchElementException, ns:
                 i += 1
                 time.sleep(1)
+        raise Exception()
 
     def wait_for_elements_present(self, by,value, timeout=10):
         i = 0
@@ -64,6 +90,7 @@ class Test(unittest.TestCase):
             except NoSuchElementException, ns:
                 i += 1
                 time.sleep(1)
+        raise Exception()
 
 if __name__ == "__main__":
     # import sys;sys.argv = ['', 'Test.testName']
