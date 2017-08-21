@@ -21,7 +21,7 @@ class Wechat():
         :return: None
         '''
         self.public_name = public_name
-        self.log.info('公众号名称 {0}'.format(self.public_name))
+        self.log.info('公众号名称 {0}'.format(code))
         self.app.find_element(xpath().Attribute("text='通讯录'").draw).click()
         self.log.info('点击通讯录')
         self.app.find_element(xpath().Attribute("text='公众号'").draw).click()
@@ -43,11 +43,12 @@ class Wechat():
         :param keyword: 需要发送的文本消息
         :return: None
         '''
-        if self.app.find_element(xpath().ImageView(attr="content-desc='消息'").draw):
+        if not self.app.find_element(xpath().ImageView(attr="content-desc='服务按钮'").draw):
             self.log.info('点击消息按钮')
             self.app.find_element(xpath().ImageView(attr="content-desc='消息'").draw).click()
         self.log.info('发送文本信息：{0}'.format(keyword))
         self.app.find_element(xpath().Attribute("class='android.widget.EditText'").draw).send_keys(keyword)
+        time.sleep(1)
         self.log.info('点击发送按钮')
         self.app.find_element(xpath().Attribute("text='发送'").draw).click()
 
@@ -58,7 +59,7 @@ class Wechat():
         :param menus: list类型，根据list中按钮名称的顺序点击公众号下方的按钮
         :return: None
         '''
-        if self.app.find_element(xpath().ImageView(attr="content-desc='服务按钮'").draw):
+        if not self.app.find_element(xpath().ImageView(attr="content-desc='消息'").draw):
             self.log.info('点击服务按钮')
             self.app.find_element(xpath().ImageView(attr="content-desc='服务按钮'").draw).click()
         for key in menu:

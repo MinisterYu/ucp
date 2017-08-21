@@ -24,20 +24,33 @@ class Test(unittest.TestCase):
         self.driver = webdriver.Remote("http://localhost:4723/wd/hub", self.desired_caps)
         self.driver.implicitly_wait(1)
         self.wechat = Wechat(self.driver,log='info')
-        self.wechat.initial_scenario(u'信用卡')
 
     def tearDown(self):
         self.driver.quit()
         print 'done'
 
-    def test_public(self):
+    def test_public1(self):
+        self.wechat.initial_scenario(code=u'信用卡',public_name='微信公众平台测试号')
         self.wechat.send_msg(u'你好')
-        print self.wechat.get_last_agent_msg()
-        self.wechat.send_msg(u'哈哈哈哈')
         print self.wechat.get_last_agent_msg()
         self.wechat.find_service([u'易 •服务',u'积分查询'])
         print self.wechat.get_last_agent_msg()
-        self.wechat.send_msg(u'嚯嚯嚯')
+        self.wechat.send_msg(u'转人工')
+        print self.wechat.get_last_agent_msg()
+
+    def test_public2(self):
+        self.wechat.initial_scenario(code=u'银行',public_name='微信公众平台测试号')
+        self.wechat.send_msg(u'你好')
+        print self.wechat.get_last_agent_msg()
+        self.wechat.send_msg(u'转人工')
+        print self.wechat.get_last_agent_msg()
+
+
+    def test_public3(self):
+        self.wechat.initial_scenario(code=u'信用卡',public_name='微信公众平台测试号')
+        self.wechat.send_msg(u'你好')
+        print self.wechat.get_last_agent_msg()
+        self.wechat.send_msg(u'转人工')
         print self.wechat.get_last_agent_msg()
 
 if __name__ == "__main__":
