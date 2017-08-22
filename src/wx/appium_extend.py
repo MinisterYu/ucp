@@ -160,6 +160,15 @@ class xpath():
         self.e += e
         return xpath(self.e)
 
+    def Button(self,index=0,attr=''):
+        e = '/android.widget.Button'
+        if attr :
+            e += '[@{0}]'.format(attr)
+        if index:
+            e += '[{0}]'.format(index)
+        self.e += e
+        return xpath(self.e)
+
     @property
     def draw(self):
         return self.e

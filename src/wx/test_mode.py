@@ -37,21 +37,21 @@ class Test(unittest.TestCase):
         print self.wechat.get_last_agent_msg()
         self.wechat.send_msg(u'转人工')
         print self.wechat.get_last_agent_msg()
-
-    def test_public2(self):
-        self.wechat.initial_scenario(code=u'银行',public_name='微信公众平台测试号')
-        self.wechat.send_msg(u'你好')
-        print self.wechat.get_last_agent_msg()
-        self.wechat.send_msg(u'转人工')
-        print self.wechat.get_last_agent_msg()
-
-
-    def test_public3(self):
-        self.wechat.initial_scenario(code=u'信用卡',public_name='微信公众平台测试号')
-        self.wechat.send_msg(u'你好')
-        print self.wechat.get_last_agent_msg()
-        self.wechat.send_msg(u'转人工')
-        print self.wechat.get_last_agent_msg()
+    #
+    # def test_public2(self):
+    #     self.wechat.initial_scenario(code=u'银行',public_name='微信公众平台测试号')
+    #     self.wechat.send_msg(u'你好')
+    #     print self.wechat.get_last_agent_msg()
+    #     self.wechat.send_msg(u'转人工')
+    #     print self.wechat.get_last_agent_msg()
+    #
+    #
+    # def test_public3(self):
+    #     self.wechat.initial_scenario(code=u'信用卡',public_name='微信公众平台测试号')
+    #     self.wechat.send_msg(u'你好')
+    #     print self.wechat.get_last_agent_msg()
+    #     self.wechat.send_msg(u'转人工')
+    #     print self.wechat.get_last_agent_msg()
 
 if __name__ == "__main__":
     # import sys;sys.argv = ['', 'Test.testName']

@@ -47,10 +47,10 @@ class Wechat():
             self.log.info('点击消息按钮')
             self.app.find_element(xpath().ImageView(attr="content-desc='消息'").draw).click()
         self.log.info('发送文本信息：{0}'.format(keyword))
-        self.app.find_element(xpath().Attribute("class='android.widget.EditText'").draw).send_keys(keyword)
-        time.sleep(1)
+        self.app.find_element(xpath().EditText(attr="resource-id='com.tencent.mm:id/a5e'").draw).send_keys(keyword)
+        # self.app.find_element(xpath().Attribute("class='android.widget.EditText'").draw).send_keys(keyword)
         self.log.info('点击发送按钮')
-        self.app.find_element(xpath().Attribute("text='发送'").draw).click()
+        self.app.find_element(xpath().Button(attr="text='发送'").draw).click()
 
     def find_service(self,menu):
         '''
