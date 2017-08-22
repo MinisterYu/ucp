@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="48ec157d-71da-4a99-992d-1550367797b8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/wx/appium_extend.py" afterPath="$PROJECT_DIR$/src/wx/appium_extend.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/wx/business.py" afterPath="$PROJECT_DIR$/src/wx/business.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/wx/test_mode.py" afterPath="$PROJECT_DIR$/src/wx/test_mode.py" />
     </list>
@@ -20,8 +17,8 @@
       <file leaf-file-name="test_mode.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/wx/test_mode.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="337">
-              <caret line="42" column="37" lean-forward="true" selection-start-line="42" selection-start-column="37" selection-end-line="42" selection-end-column="37" />
+            <state relative-caret-position="120">
+              <caret line="8" column="27" lean-forward="true" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
               <folding>
                 <element signature="e#69#84#0" expanded="true" />
               </folding>
@@ -32,8 +29,8 @@
       <file leaf-file-name="business.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/wx/business.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="33" column="46" lean-forward="true" selection-start-line="33" selection-start-column="46" selection-end-line="33" selection-end-column="46" />
+            <state relative-caret-position="257">
+              <caret line="30" column="22" lean-forward="true" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -172,7 +169,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.test_mode">
+  <component name="RunManager" selected="Python tests.Unittests in test_mode.py">
     <configuration name="Unittests for test_mode.Test" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -363,10 +360,10 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.test_mode" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in test_mode.py" />
-        <item index="2" class="java.lang.String" itemvalue="Python.business" />
-        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests for test_mode.Test" />
+        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in test_mode.py" />
+        <item index="1" class="java.lang.String" itemvalue="Python.test_mode" />
+        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests for test_mode.Test" />
+        <item index="3" class="java.lang.String" itemvalue="Python.business" />
         <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests for test_mode.Test.test_public" />
       </list>
     </recent_temporary>
@@ -388,9 +385,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_for_test_mode_Test - 2017.08.21 at 12h 23m 07s.xml">
-      <configuration name="Unittests for test_mode.Test" configurationId="tests" />
-    </history-entry>
     <history-entry file="Unittests_for_test_mode_Test - 2017.08.21 at 13h 37m 12s.xml">
       <configuration name="Unittests for test_mode.Test" configurationId="tests" />
     </history-entry>
@@ -407,6 +401,9 @@
       <configuration name="Unittests for test_mode.Test" configurationId="tests" />
     </history-entry>
     <history-entry file="Unittests_for_test_mode_Test - 2017.08.21 at 16h 55m 31s.xml">
+      <configuration name="Unittests for test_mode.Test" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_test_mode_Test - 2017.08.22 at 17h 55m 12s.xml">
       <configuration name="Unittests for test_mode.Test" configurationId="tests" />
     </history-entry>
     <history-entry file="Unittests_in_test_mode_py - 2017.08.21 at 13h 57m 00s.xml">
@@ -427,7 +424,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.41411042" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39957717" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.398773" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -525,8 +522,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/wx/test_mode.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="42" column="37" lean-forward="true" selection-start-line="42" selection-start-column="37" selection-end-line="42" selection-end-column="37" />
+        <state relative-caret-position="120">
+          <caret line="8" column="27" lean-forward="true" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
           <folding>
             <element signature="e#69#84#0" expanded="true" />
           </folding>
@@ -535,8 +532,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/wx/business.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="33" column="46" lean-forward="true" selection-start-line="33" selection-start-column="46" selection-end-line="33" selection-end-column="46" />
+        <state relative-caret-position="257">
+          <caret line="30" column="22" lean-forward="true" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
           <folding />
         </state>
       </provider>

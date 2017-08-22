@@ -20,6 +20,7 @@ class Wechat():
         :param public_name: 测试对象的公众号名称，默认验证为“微信公众平台测试号”
         :return: None
         '''
+        self.code = code
         self.public_name = public_name
         self.log.info('公众号名称 {0}'.format(code))
         self.app.find_element(xpath().Attribute("text='通讯录'").draw).click()
@@ -28,8 +29,8 @@ class Wechat():
         self.log.info('点击公众号选项')
         self.app.find_element(xpath().Attribute("text='{0}'".format(self.main_entry)).draw).click()
         self.log.info('进入【{0}】聊天页面'.format(self.main_entry))
-        self.send_msg(code)
-        self.log.info('发送消息：{0} 给【{1}】'.format(code,self.main_entry))
+        self.send_msg(self.code)
+        self.log.info('发送消息：{0} 给【{1}】'.format(self.code,self.main_entry))
         self.get_last_ucp_image().click()
         self.log.info('点击{0}二维码'.format(code))
         self.app.long_press_screen(duration=2000)
@@ -76,16 +77,16 @@ class Wechat():
         last_msg = self.app.find_elements(self.__test_public_view_list__)[-1]
         if self.app.find_element(self.__test_public_agent_icon__,obj=last_msg):
             if self.app.find_element(self.__text_msg__,obj=last_msg).get_attribute('text'):
-                self.log.info('获取公众号最后的消息类型为文本信息')
+                self.log.info('获取{0}最后的消息类型为文本信息'.format(self.code))
                 return self.app.find_element(self.__text_msg__,obj=last_msg).get_attribute('text')
             elif self.app.find_element(self.__image_msg__,obj=last_msg):
-                self.log.info('获取公众号最后的消息类型为图片')
+                self.log.info('获取{0}最后的消息类型为图片'.format(self.code))
                 return 'picture'
             else:
-                self.log.info('获取公众号最后的消息类型为未知')
+                self.log.info('获取{0}最后的消息类型为未知'.format(self.code))
                 return 'other type'
         else:
-            self.log.info('获取公众号最后的消息类型为模板消息')
+            self.log.info('获取{0}最后的消息类型为模板消息'.format(self.code))
             return 'template'
 
 
@@ -130,10 +131,11 @@ class Wechat():
         公众号坐席头像XPATH，需要在 __chat_list_view__ 后使用
         :return: XPATH
         '''
-        self.log.info('获取【{0}】发送的消息 '.format(public_name))
+        attr = "content-desc='{0}头像'".format(public_name)
+        self.log.info('获取【{0}】发送的消息 '.format(self.code))
         x= xpath().LinearLayout().\
                       RelativeLayout().\
-                      Attribute("content-desc='{0}头像'".format(public_name)).draw
+                      Attribute(attr=attr).draw
         return x
     def __chat_list_view__(self,public_name):
         '''
@@ -141,7 +143,7 @@ class Wechat():
         :return: XPATH
         '''
         attr = 'content-desc="当前所在页面,与{0}的聊天"'.format(public_name)
-        self.log.info('获取【{0}】聊天信息列表'.format(public_name))
+        self.log.info('获取【{0}】聊天信息列表'.format(self.code))
         x= xpath().FrameLayout(attr=attr) \
             .FrameLayout()\
             .LinearLayout()\
