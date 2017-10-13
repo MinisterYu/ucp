@@ -5,6 +5,8 @@ from appium_extend import AppiumExtend,xpath
 import time
 from mylog import Logger
 
+client_name = '鱼打虾'
+
 class Wechat():
 
     def __init__(self,driver,log='debug'):
@@ -48,10 +50,11 @@ class Wechat():
             self.log.info('点击消息按钮')
             self.app.find_element(xpath().ImageView(attr="content-desc='消息'").draw).click()
         self.log.info('发送文本信息：{0}'.format(keyword))
-        self.app.find_element(xpath().EditText(attr="resource-id='com.tencent.mm:id/a5e'").draw).send_keys(keyword)
+        self.app.find_element(xpath().EditText(attr="resource-id='com.tencent.mm:id/a49'").draw).send_keys(keyword)
         # self.app.find_element(xpath().Attribute("class='android.widget.EditText'").draw).send_keys(keyword)
         self.log.info('点击发送按钮')
-        self.app.find_element(xpath().Button(attr="text='发送'").draw).click()
+        # self.app.find_element(xpath().Button(attr="text='发送'").draw).click()
+        self.app.find_element(xpath().Button(attr="resource-id='com.tencent.mm:id/a4e'").draw).click()
 
     def find_service(self,menu):
         '''
@@ -85,6 +88,9 @@ class Wechat():
             else:
                 self.log.info('获取{0}最后的消息类型为未知'.format(self.code))
                 return 'other type'
+        elif self.app.find_element(self.__test_client_icon__,obj=last_msg):
+            self.log.info('获取{0}最后的消息类型为客户消息'.format(self.code))
+            return 'client msg'
         else:
             self.log.info('获取{0}最后的消息类型为模板消息'.format(self.code))
             return 'template'
@@ -119,8 +125,13 @@ class Wechat():
         return self.__agent_icon__(self.public_name)
 
     @property
+    def __test_client_icon__(self):
+        return self.__client_icon__()
+
+
+    @property
     def __image_msg__(self):
-        return xpath().LinearLayout().LinearLayout().FrameLayout().ImageView().draw
+        return xpath().LinearLayout().LinearLayout().FrameLayout().ImageView(2).draw
 
     @property
     def __text_msg__(self):
@@ -137,6 +148,19 @@ class Wechat():
                       RelativeLayout().\
                       Attribute(attr=attr).draw
         return x
+
+    def __client_icon__(self):
+        '''
+        公众号坐席头像XPATH，需要在 __chat_list_view__ 后使用
+        :return: XPATH
+        '''
+        attr = "content-desc='{0}头像'".format(client_name)
+        self.log.info('获取【{0}】发送的消息 '.format(client_name))
+        x= xpath().LinearLayout().\
+                      RelativeLayout().\
+                      Attribute(attr=attr).draw
+        return x
+
     def __chat_list_view__(self,public_name):
         '''
         公众号聊天对话窗口XPATH
