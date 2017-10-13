@@ -44,14 +44,63 @@ class Test(unittest.TestCase):
         print self.wechat.get_last_agent_msg()
         self.wechat.send_msg(u'转人工')
         print self.wechat.get_last_agent_msg()
-
-
-    def test_public3(self):
-        self.wechat.initial_scenario(code=u'信用卡',public_name='微信公众平台测试号')
-        self.wechat.send_msg(u'你好')
-        print self.wechat.get_last_agent_msg()
-        self.wechat.send_msg(u'转人工')
-        print self.wechat.get_last_agent_msg()
+    #
+    #
+    # def test_public3(self):
+    #     self.wechat.initial_scenario(code=u'信用卡',public_name='微信公众平台测试号')
+    #     self.wechat.send_msg(u'你好')
+    #     print self.wechat.get_last_agent_msg()
+    #     self.wechat.send_msg(u'转人工')
+    #     print self.wechat.get_last_agent_msg()
+    #
+    # def test_public4(self):
+    #     self.wechat.initial_scenario(code=u'银行',public_name='微信公众平台测试号')
+    #     self.wechat.send_msg(u'你好')
+    #     print self.wechat.get_last_agent_msg()
+    #     self.wechat.send_msg(u'转人工')
+    #     print self.wechat.get_last_agent_msg()
+    #
+    # def test_public5(self):
+    #     self.wechat.initial_scenario(code=u'信用卡',public_name='微信公众平台测试号')
+    #     self.wechat.send_msg(u'你好')
+    #     print self.wechat.get_last_agent_msg()
+    #     self.wechat.send_msg(u'转人工')
+    #     print self.wechat.get_last_agent_msg()
+    #
+    # def test_public6(self):
+    #     self.wechat.initial_scenario(code=u'银行',public_name='微信公众平台测试号')
+    #     self.wechat.send_msg(u'你好')
+    #     print self.wechat.get_last_agent_msg()
+    #     self.wechat.send_msg(u'转人工')
+    #     print self.wechat.get_last_agent_msg()
+    #
+    # def test_public7(self):
+    #     self.wechat.initial_scenario(code=u'信用卡',public_name='微信公众平台测试号')
+    #     self.wechat.send_msg(u'你好')
+    #     print self.wechat.get_last_agent_msg()
+    #     self.wechat.send_msg(u'转人工')
+    #     print self.wechat.get_last_agent_msg()
+    #
+    # def test_public8(self):
+    #     self.wechat.initial_scenario(code=u'信用卡',public_name='微信公众平台测试号')
+    #     self.wechat.send_msg(u'你好')
+    #     print self.wechat.get_last_agent_msg()
+    #     self.wechat.send_msg(u'转人工')
+    #     print self.wechat.get_last_agent_msg()
+    #
+    # def test_public9(self):
+    #     self.wechat.initial_scenario(code=u'银行',public_name='微信公众平台测试号')
+    #     self.wechat.send_msg(u'你好')
+    #     print self.wechat.get_last_agent_msg()
+    #     self.wechat.send_msg(u'转人工')
+    #     print self.wechat.get_last_agent_msg()
+    #
+    # def test_public10(self):
+    #     self.wechat.initial_scenario(code=u'信用卡',public_name='微信公众平台测试号')
+    #     self.wechat.send_msg(u'你好')
+    #     print self.wechat.get_last_agent_msg()
+    #     self.wechat.send_msg(u'转人工')
+    #     print self.wechat.get_last_agent_msg()
 
 
 

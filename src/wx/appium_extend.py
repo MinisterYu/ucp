@@ -24,18 +24,16 @@ class AppiumExtend():
         :return: web_element
         '''
         i = 0
+        driver = obj or self._driver
         while i < timeout:
             try:
-                if not obj:
-                    self.log.debug('finding element:{0}'.format(value))
-                    return self._driver.find_element(By.XPATH,value)
-                else:
-                    self.log.debug('finding element:{0}'.format(value))
-                    return obj.find_element(By.XPATH,value)
+                self.log.debug('finding element:{0}'.format(value))
+                return driver.find_element(By.XPATH,value)
             except NoSuchElementException, ns:
                 i += 1
                 time.sleep(1)
         self.log.warn('appium can not find element:{0}'.format(value))
+        self.log.warn(driver.page_source)
         return None
 
     def find_elements(self,value,timeout=10,obj=''):
@@ -46,18 +44,17 @@ class AppiumExtend():
         :return: web_elements
         '''
         i = 0
+        driver = obj or self._driver
         while i < timeout:
             try:
                 if not obj:
                     self.log.debug('finding elements:{0}'.format(value))
-                    return self._driver.find_elements(By.XPATH,value)
-                else:
-                    self.log.debug('finding elements:{0}'.format(value))
-                    return obj.find_elements(By.XPATH,value)
+                    return driver.find_elements(By.XPATH,value)
             except NoSuchElementException, ns:
                 i += 1
                 time.sleep(1)
         self.log.warn('appium can not find elements:{0}'.format(value))
+        self.log.warn(driver.page_source)
         return None
 
     def long_press_screen(self,x=100,y=100,duration=2000):
